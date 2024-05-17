@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int triangle;
+    int side1, side2, side3;
+    int sum = 0;
+    int choose;
+
+    printf("Please choose triangle type: 1/equilateral, 2/isosceles, 3/scalene ");
+    scanf("%d", &choose);
+
+    if (choose == 1 || choose == 2 || choose == 3) {
+        printf("Please enter the sides of the triangle: ");
+        scanf("%d %d %d", &side1, &side2, &side3);
+
+        sum = side1 + side2 + side3;
+
+        if (choose == 1) {
+            printf("Equilateral triangle selected.\n");
+        } else if (choose == 2) {
+            printf("Isosceles triangle selected.\n");
+        } else {
+            printf("Scalene triangle selected.\n");
+        }
+
+        printf("Sum of the sides: %d\n", sum);
+    } else {
+        printf("Invalid choice. Please choose 1, 2, or 3.\n");
+    }
+
+    return 0;
+}

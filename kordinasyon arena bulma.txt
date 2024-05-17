@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+   int x,y ;
+   
+   printf("please enter x any y cordination number");
+   scanf("%d %d",&x,&y);
+   
+   if(x>0 && y>0) {
+       printf( "this first area\n");
+    }else if(x>0 && y<0) {
+        printf( "this four area\n");
+   }else if (x<0 && y<0){
+        printf( "this third area\n");
+   }else if (x<0 && y>0){
+        printf( "this second area\n");
+   }
+   
+    return 0;
+}

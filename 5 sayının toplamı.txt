@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+   int x[5],i,sum=0;
+   
+   printf("please enter a five integer");
+   for(i=0;i<5;i++){
+       scanf("%d",&x[i]);
+   }
+   
+   for(i=0;i<5;i++){
+       sum=sum+x[i];
+   }
+   
+   printf("sum is %d",sum);
+    retu

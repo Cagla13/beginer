@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int elemanSayisi;
+
+    printf("Dizi boyutunu girin: ");
+    scanf("%d", &elemanSayisi);
+
+    // ElemanSayisi kadar bellekte yer ayırmak için malloc kullanılır
+    int *diziIsaretcisi = (int *)malloc(elemanSayisi * sizeof(int));
+
+    if (diziIsaretcisi == NULL) {
+        printf("Bellek tahsis edilemedi!\n");
+        return 1;
+    }
+
+    // Kullanıcıdan elemanları diziye atamak
+    for (int i = 0; i < elemanSayisi; ++i) {
+        printf("Dizi elemani %d: ", i);
+        scanf("%d", &diziIsaretcisi[i]);
+    }
+
+    // Diziyi ekrana yazdırmak
+    printf("Girilen Dizi: ");
+    for (int i = 0; i < elemanSayisi; ++i) {
+        printf("%d ", diziIsaretcisi[i]);
+    }
+
+    // Belleği serbest bırakmak için free kullanılır
+    free(diziIsaretcisi);
+
+    return 0;
+}
